@@ -66,6 +66,12 @@ function game(){
         console.log("You Lost!")
     } if (playerWins == computerWins){
         console.log("It's a Tie!")
+    } if (playerWins == 5){
+        console.log("TOTAL DOMINATION!")
+    } if (computerWins == 5){
+        console.log("HUMILIATION!")
+    } if (playerWins == 0 && computerWins == 0) {
+        console.log("STALEMATE")
     }
 }
 
