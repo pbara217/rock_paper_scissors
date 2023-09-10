@@ -46,13 +46,14 @@ function playRound(playerSelection, computerSelection){
 
 }
 function game(){
-    const rounds = 5;
+    const rounds = 6;
     let playerWins = 0;
     let computerWins = 0;
-    for(let i = 0; i < rounds; i++){
+    for(let i = 1; i < rounds; i++){
         let computerSelection = getcomputerSelection();
         let playerSelection = getplayerSelection(); 
         let outcome = playRound(playerSelection, computerSelection);
+        console.log("Round " + i)
         console.log(outcome)
         if (outcome.includes("Win")){
             playerWins++
