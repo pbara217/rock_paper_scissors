@@ -52,11 +52,16 @@ function game(){
     for(let i = 0; i < rounds; i++){
         let computerSelection = getcomputerSelection();
         let playerSelection = getplayerSelection(); 
-        console.log(playRound(playerSelection, computerSelection))
-        if (playRound.contains("Win")){
+        let outcome = playRound(playerSelection, computerSelection);
+        console.log(outcome)
+        if (outcome.includes("Win")){
             playerWins++
-        } if (playRound.contains("Lose")){
+        } if (outcome.includes("Lose")){
             computerWins++
         }
+        console.log("The current score is: You: " + playerWins + " Computer:" + computerWins)
     }
-}game
+    console.log("The final score is: You: " + playerWins + " Computer:" + computerWins)
+}
+
+game()
