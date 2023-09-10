@@ -45,4 +45,18 @@ function playRound(playerSelection, computerSelection){
     } 
 
 }
-console.log(playRound(playerSelection, computerSelection))
+function game(){
+    const rounds = 5;
+    let playerWins = 0;
+    let computerWins = 0;
+    for(let i = 0; i < rounds; i++){
+        let computerSelection = getcomputerSelection();
+        let playerSelection = getplayerSelection(); 
+        console.log(playRound(playerSelection, computerSelection))
+        if (playRound.contains("Win")){
+            playerWins++
+        } if (playRound.contains("Lose")){
+            computerWins++
+        }
+    }
+}game
