@@ -59,9 +59,9 @@ function game(){
         } if (outcome.includes("Lose")){
             computerWins++
         }
-        console.log("The current score is: You: " + playerWins + " Computer:" + computerWins)
+        console.log("The current score is: You: " + playerWins + " Computer: " + computerWins)
     }
-    console.log("The final score is: You: " + playerWins + " Computer:" + computerWins)
+    console.log("The final score is: You: " + playerWins + " Computer: " + computerWins)
     if ( playerWins > computerWins){
         console.log("You Won!")
     } if (playerWins < computerWins){
