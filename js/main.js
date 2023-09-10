@@ -15,9 +15,6 @@ function getplayerSelection(){
     }
     
 }
-const computerSelection = getcomputerSelection();
-const playerSelection = getplayerSelection();
-console.log(playerSelection + " " + computerSelection)
 function playRound(playerSelection, computerSelection){
     let player = playerSelection;
     let computer = computerSelection;
