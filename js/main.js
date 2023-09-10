@@ -1,18 +1,20 @@
-function computerSelection (){
-    const choices = ["Rock", "Paper", "Scissors"];
+function getcomputerSelection (){
+    const choices = ["rock", "paper", "scissors"];
     let randomChoice = Math.floor(Math.random()*3)
-    console.log("The Computer chose: " + choices[randomChoice])
+    return choices[randomChoice]
 
 }
-function playerSelection(){
+function getplayerSelection(){
     const choices = ["rock", "paper", "scissors"]
     let playerChoice = prompt("Let's play a game. Please choose one of the following: Rock, Paper, Scissors");
     playerChoice = playerChoice.toLowerCase();
-    if ( playerChoice == choices[0] || playerChoice == choices[1] || playerChoice == choices[1]){
-        console.log(playerChoice);
+    if ( playerChoice == choices[0] || playerChoice == choices[1] || playerChoice == choices[2]){
+        return playerChoice;
     } else {
-        playerSelection();
+        getplayerSelection();
     }
+    
 }
-playerSelection()
-computerSelection()
+const computerSelection = getcomputerSelection();
+const playerSelection = getplayerSelection();
+console.log(playerSelection + " " + computerSelection)
