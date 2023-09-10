@@ -5,11 +5,14 @@ function computerSelection (){
 
 }
 function playerSelection(){
-    const choices = [rock, paper, scissors]
+    const choices = ["rock", "paper", "scissors"]
     let playerChoice = prompt("Let's play a game. Please choose one of the following: Rock, Paper, Scissors");
     playerChoice = playerChoice.toLowerCase();
-    console.log(playerChoice)
-    
+    if ( playerChoice == choices[0] || playerChoice == choices[1] || playerChoice == choices[1]){
+        console.log(playerChoice);
+    } else {
+        playerSelection();
+    }
 }
 playerSelection()
 computerSelection()
