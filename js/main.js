@@ -6,7 +6,7 @@ function getcomputerSelection (){
 }
 function getplayerSelection(){
     const choices = ["rock", "paper", "scissors"]
-    let playerChoice = prompt("Let's play a game. Please choose one of the following: Rock, Paper, Scissors");
+    let playerChoice = prompt("Please choose one of the following: Rock, Paper, Scissors");
     playerChoice = playerChoice.toLowerCase();
     if ( playerChoice == choices[0] || playerChoice == choices[1] || playerChoice == choices[2]){
         return playerChoice;
@@ -43,6 +43,7 @@ function playRound(playerSelection, computerSelection){
 
 }
 function game(){
+    alert("Let's play a game: Best of 5 rounds of: \n Rock, Paper, Scissors");
     const rounds = 6;
     let playerWins = 0;
     let computerWins = 0;
