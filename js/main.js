@@ -5,17 +5,24 @@ function getplayerSelection(){
     const buttonOne = document.getElementById("rock");
     buttonOne.addEventListener("click", function() {
         playerChoice = "rock";
-        console.log(playerChoice);
         const choices = ["rock", "paper", "scissors"];
     let randomChoice = Math.floor(Math.random()*3);
     let computer = choices[randomChoice]
-    console.log(computer)
     if (playerChoice == "rock" && computer == "rock"){
-        console.log("You have picked Rock. The Computer has picked Rock.\n This is a tie.")
+        const roundResult = document.getElementById('result');
+        const resultText = document.createElement('p');
+        resultText.textContent = 'You have picked Rock. The Computer has picked Rock.\n This is a tie.';
+        result.appendChild(resultText);
     } if (playerChoice == "rock" && computer == "paper"){
-        console.log( "You Lose! Paper covers Rock")
+        const roundResult = document.getElementById('result');
+        const resultText = document.createElement('p');
+        resultText.textContent = 'You Lose! Paper covers Rock';
+        result.appendChild(resultText);
     } if (playerChoice == "rock" && computer == "scissors"){
-        console.log( "You Win! Rock smashes Scissors")
+        const roundResult = document.getElementById('result');
+        const resultText = document.createElement('p');
+        resultText.textContent = 'You Win! Rock smashes Scissors';
+        result.appendChild(resultText);
     }
 
     });
@@ -87,6 +94,8 @@ function playRound(playerSelection, computerSelection){
     } if (player == "scissors" && computer == "rock"){
         return "You Lose! Rock smashes scissors"
     } 
+
+
 
 }
 
