@@ -11,6 +11,18 @@ function getplayerSelection(){
     buttonOne.addEventListener("click", function() {
         playerChoice = "rock";
         console.log(playerChoice);
+        const choices = ["rock", "paper", "scissors"];
+    let randomChoice = Math.floor(Math.random()*3);
+    let computer = choices[randomChoice]
+    console.log(computer)
+    if (playerChoice == "rock" && computer == "rock"){
+        console.log("You have picked Rock. The Computer has picked Rock.\n This is a tie.")
+    } if (playerChoice == "rock" && computer == "paper"){
+        return "You Lose! Paper covers Rock"
+    } if (playerChoice == "rock" && computer == "scissors"){
+        return "You Win! Rock smashes Scissors"
+    }
+
     });
   });
   document.addEventListener('DOMContentLoaded', function() {
@@ -27,7 +39,7 @@ function getplayerSelection(){
         console.log(playerChoice);
     });
   });
-   
+   return playerChoice;
 }
 
 
@@ -59,8 +71,6 @@ function playRound(playerSelection, computerSelection){
 
 }
 function game(){
-   /* alert("Let's play a game: \n Rock, Paper, Scissors");     --- removed alerts*/ 
-    const rounds = 6;
     let playerWins = 0;
     let computerWins = 0;
     
