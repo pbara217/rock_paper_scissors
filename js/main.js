@@ -53,17 +53,22 @@ function getplayerSelection(){
     const buttonThree = document.getElementById("scissors");
     buttonThree.addEventListener("click", function() {
         playerChoice = "scissors";
-        console.log(playerChoice);
         const choices = ["rock", "paper", "scissors"];
     let randomChoice = Math.floor(Math.random()*3);
     let computer = choices[randomChoice]
-    console.log(computer)
+    const roundText = document.getElementById('resultText');
     if (playerChoice == "scissors" && computer == "rock"){
-        console.log("You Lose! Rock smashes scissors")
+        const roundText = document.getElementById('resultText');
+        win = 'You Lose! Rock smashes scissors';
+        roundText.textContent = win;
     } if (playerChoice == "scissors" && computer == "paper"){
-        console.log( "You Win! Scissors cuts Paper")
+        const roundText = document.getElementById('resultText');
+        win = 'You Win! Scissors cuts Paper';
+        roundText.textContent = win;
     } if (playerChoice == "scissors" && computer == "scissors"){
-        console.log( "You have picked Scissors. The Computer has picked Scissors.\n This is a tie.")
+        const roundText = document.getElementById('resultText');
+        win = 'You have picked Scissors. The Computer has picked Scissors.\n This is a tie.';
+        roundText.textContent = win;
     }
 
     });
