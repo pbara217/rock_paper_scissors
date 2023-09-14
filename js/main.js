@@ -2,19 +2,35 @@ function getcomputerSelection (){
     const choices = ["rock", "paper", "scissors"];
     let randomChoice = Math.floor(Math.random()*3)
     return choices[randomChoice]
-
+    console.log(choices)
 }
 function getplayerSelection(){
-    const choices = ["rock", "paper", "scissors"]
-   /* let playerChoice = prompt("Please choose one of the following: Rock, Paper, Scissors"); ---- removed alert */
-    playerChoice = playerChoice.toLowerCase();
-    if ( playerChoice == choices[0] || playerChoice == choices[1] || playerChoice == choices[2]){
-        return playerChoice;
-    } else {
-        getplayerSelection();
-    }
-    
+    let playerChoice = "";
+   document.addEventListener('DOMContentLoaded', function() {
+    const buttonOne = document.getElementById("rock");
+    buttonOne.addEventListener("click", function() {
+        playerChoice = "rock";
+        console.log(playerChoice);
+    });
+  });
+  document.addEventListener('DOMContentLoaded', function() {
+    const buttonTwo = document.getElementById("paper");
+    buttonTwo.addEventListener("click", function() {
+        playerChoice = "paper";
+        console.log(playerChoice);
+    });
+  });
+  document.addEventListener('DOMContentLoaded', function() {
+    const buttonThree = document.getElementById("scissors");
+    buttonThree.addEventListener("click", function() {
+        playerChoice = "scissors";
+        console.log(playerChoice);
+    });
+  });
+   
 }
+
+
 function playRound(playerSelection, computerSelection){
     let player = playerSelection;
     let computer = computerSelection;
