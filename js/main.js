@@ -1,9 +1,4 @@
-function getcomputerSelection (){
-    const choices = ["rock", "paper", "scissors"];
-    let randomChoice = Math.floor(Math.random()*3)
-    return choices[randomChoice]
-    console.log(choices)
-}
+
 function getplayerSelection(){
     let playerChoice = "";
    document.addEventListener('DOMContentLoaded', function() {
@@ -94,15 +89,6 @@ function playRound(playerSelection, computerSelection){
     } 
 
 }
-function game(){
-    let playerWins = 0;
-    let computerWins = 0;
-    
-        let computerSelection = getcomputerSelection();
-        let playerSelection = getplayerSelection(); 
-        let outcome = playRound(playerSelection, computerSelection);
-        console.log(outcome)
-}
 
-game()
+getplayerSelection()
 
