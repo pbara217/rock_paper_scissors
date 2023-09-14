@@ -8,21 +8,19 @@ function getplayerSelection(){
         const choices = ["rock", "paper", "scissors"];
     let randomChoice = Math.floor(Math.random()*3);
     let computer = choices[randomChoice]
+    const roundText = document.getElementById('resultText');
     if (playerChoice == "rock" && computer == "rock"){
-        const roundResult = document.getElementById('result');
-        const resultText = document.createElement('p');
-        resultText.textContent = 'You have picked Rock. The Computer has picked Rock.\n This is a tie.';
-        result.appendChild(resultText);
+        const roundText = document.getElementById('resultText');
+        win = 'You have picked Rock. The Computer has picked Rock.\n This is a tie.';
+        roundText.textContent = win;
     } if (playerChoice == "rock" && computer == "paper"){
-        const roundResult = document.getElementById('result');
-        const resultText = document.createElement('p');
-        resultText.textContent = 'You Lose! Paper covers Rock';
-        result.appendChild(resultText);
+        const roundText = document.getElementById('resultText');
+        win = 'You Lose! Paper covers Rock';
+        roundText.textContent = win;
     } if (playerChoice == "rock" && computer == "scissors"){
-        const roundResult = document.getElementById('result');
-        const resultText = document.createElement('p');
-        resultText.textContent = 'You Win! Rock smashes Scissors';
-        result.appendChild(resultText);
+        const roundText = document.getElementById('resultText');
+        win = 'You Win! Rock smashes Scissors';
+        roundText.textContent = win;
     }
 
     });
