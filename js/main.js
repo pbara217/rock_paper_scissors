@@ -45,20 +45,20 @@ function getplayerSelection(){
     });
   });
   document.addEventListener('DOMContentLoaded', function() {
-    const buttonOne = document.getElementById("rock");
-    buttonOne.addEventListener("click", function() {
-        playerChoice = "rock";
+    const buttonThree = document.getElementById("scissors");
+    buttonThree.addEventListener("click", function() {
+        playerChoice = "scissors";
         console.log(playerChoice);
         const choices = ["rock", "paper", "scissors"];
     let randomChoice = Math.floor(Math.random()*3);
     let computer = choices[randomChoice]
     console.log(computer)
-    if (playerChoice == "rock" && computer == "rock"){
-        console.log("You have picked Rock. The Computer has picked Rock.\n This is a tie.")
-    } if (playerChoice == "rock" && computer == "paper"){
-        return "You Lose! Paper covers Rock"
-    } if (playerChoice == "rock" && computer == "scissors"){
-        return "You Win! Rock smashes Scissors"
+    if (playerChoice == "scissors" && computer == "rock"){
+        console.log("You Lose! Rock smashes scissors")
+    } if (playerChoice == "scissors" && computer == "paper"){
+        console.log( "You Win! Scissors cuts Paper")
+    } if (playerChoice == "scissors" && computer == "scissors"){
+        console.log( "You have picked Scissors. The Computer has picked Scissors.\n This is a tie.")
     }
 
     });
