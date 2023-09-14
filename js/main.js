@@ -43,38 +43,15 @@ function playRound(playerSelection, computerSelection){
 
 }
 function game(){
-    alert("Let's play a game: Best of 5 rounds of: \n Rock, Paper, Scissors");
+    alert("Let's play a game: \n Rock, Paper, Scissors");
     const rounds = 6;
     let playerWins = 0;
     let computerWins = 0;
-    for(let i = 1; i < rounds; i++){
+    
         let computerSelection = getcomputerSelection();
         let playerSelection = getplayerSelection(); 
         let outcome = playRound(playerSelection, computerSelection);
-        console.log("Round " + i)
         console.log(outcome)
-        if (outcome.includes("Win")){
-            playerWins++
-        } if (outcome.includes("Lose")){
-            computerWins++ 
-        }
-        console.log("The current score is: You: " + playerWins + " Computer: " + computerWins)
-    }
-    console.log("The final score is: You: " + playerWins + " Computer: " + computerWins)
-    } if (playerWins == 5){
-        console.log("TOTAL DOMINATION!")
-    } if (computerWins == 5){
-        console.log("HUMILIATION!")
-    } if (playerWins == 0 && computerWins == 0) {
-        console.log("STALEMATE")
-    }
-    if ( playerWins > computerWins){
-        console.log("You Won!")
-    } if (playerWins < computerWins){
-        console.log("You Lost!")
-    } if (playerWins == computerWins){
-        console.log("It's a Tie!")
-    
 }
 
 game()
