@@ -56,7 +56,7 @@ function game(){
         if (outcome.includes("Win")){
             playerWins++
         } if (outcome.includes("Lose")){
-            computerWins++
+            computerWins++ 
         }
         console.log("The current score is: You: " + playerWins + " Computer: " + computerWins)
     }
