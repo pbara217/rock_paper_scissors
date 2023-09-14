@@ -29,17 +29,22 @@ function getplayerSelection(){
     const buttonTwo = document.getElementById("paper");
     buttonTwo.addEventListener("click", function() {
         playerChoice = "paper";
-        console.log(playerChoice);
         const choices = ["rock", "paper", "scissors"];
     let randomChoice = Math.floor(Math.random()*3);
     let computer = choices[randomChoice]
-    console.log(computer)
+    const roundText = document.getElementById('resultText');
     if (playerChoice == "paper" && computer == "rock"){
-        console.log("You Win! Paper covers Rock")
+        const roundText = document.getElementById('resultText');
+        win = 'You Win! Paper covers Rock';
+        roundText.textContent = win;
     } if (playerChoice == "paper" && computer == "paper"){
-        console.log( "You have picked Paper. The Computer has picked Paper.\n This is a tie.")
+        const roundText = document.getElementById('resultText');
+        win = 'You have picked Paper. The Computer has picked Paper.\n This is a tie.';
+        roundText.textContent = win;
     } if (playerChoice == "paper" && computer == "scissors"){
-        console.log( "You Lose! Scissors cuts Paper")
+        const roundText = document.getElementById('resultText');
+        win = 'You Lose! Scissors cuts Paper';
+        roundText.textContent = win;
     }
 
     });
