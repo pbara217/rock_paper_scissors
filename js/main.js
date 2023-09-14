@@ -18,9 +18,9 @@ function getplayerSelection(){
     if (playerChoice == "rock" && computer == "rock"){
         console.log("You have picked Rock. The Computer has picked Rock.\n This is a tie.")
     } if (playerChoice == "rock" && computer == "paper"){
-        return "You Lose! Paper covers Rock"
+        console.log( "You Lose! Paper covers Rock")
     } if (playerChoice == "rock" && computer == "scissors"){
-        return "You Win! Rock smashes Scissors"
+        console.log( "You Win! Rock smashes Scissors")
     }
 
     });
@@ -30,13 +30,37 @@ function getplayerSelection(){
     buttonTwo.addEventListener("click", function() {
         playerChoice = "paper";
         console.log(playerChoice);
+        const choices = ["rock", "paper", "scissors"];
+    let randomChoice = Math.floor(Math.random()*3);
+    let computer = choices[randomChoice]
+    console.log(computer)
+    if (playerChoice == "paper" && computer == "rock"){
+        console.log("You Win! Paper covers Rock")
+    } if (playerChoice == "paper" && computer == "paper"){
+        console.log( "You have picked Paper. The Computer has picked Paper.\n This is a tie.")
+    } if (playerChoice == "paper" && computer == "scissors"){
+        console.log( "You Lose! Scissors cuts Paper")
+    }
+
     });
   });
   document.addEventListener('DOMContentLoaded', function() {
-    const buttonThree = document.getElementById("scissors");
-    buttonThree.addEventListener("click", function() {
-        playerChoice = "scissors";
+    const buttonOne = document.getElementById("rock");
+    buttonOne.addEventListener("click", function() {
+        playerChoice = "rock";
         console.log(playerChoice);
+        const choices = ["rock", "paper", "scissors"];
+    let randomChoice = Math.floor(Math.random()*3);
+    let computer = choices[randomChoice]
+    console.log(computer)
+    if (playerChoice == "rock" && computer == "rock"){
+        console.log("You have picked Rock. The Computer has picked Rock.\n This is a tie.")
+    } if (playerChoice == "rock" && computer == "paper"){
+        return "You Lose! Paper covers Rock"
+    } if (playerChoice == "rock" && computer == "scissors"){
+        return "You Win! Rock smashes Scissors"
+    }
+
     });
   });
    return playerChoice;
