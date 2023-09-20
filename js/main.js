@@ -114,5 +114,26 @@ function updateScore () {
         roundText.textContent = `Round: ${round}`;
     }
 
+    if(round == 5){
+        if(playerScore > computerScore){
+            scoreText.textContent = `Score: ${playerScore}-${computerScore} You have won!`;
+            round = 0;
+            playerScore = 0;
+            computerScore = 0;
+        }
+        if(playerScore < computerScore){
+            scoreText.textContent = `Score: ${playerScore}-${computerScore} You have lost!`;
+            round = 0;
+            playerScore = 0;
+            computerScore = 0;
+        }
+        if(playerScore = computerScore){
+            scoreText.textContent = `Score: ${playerScore}-${computerScore} You have tied!`;
+            round = 0;
+            playerScore = 0;
+            computerScore = 0;
+        }
+    }
+
 }
     
